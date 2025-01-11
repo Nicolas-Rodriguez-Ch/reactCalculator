@@ -33,21 +33,41 @@ export default function CalculatorOperations({
           setResult(
             (calculation.leftSide! + calculation.rightSide!).toLocaleString()
           );
+          setCalculation({
+            rightSide: null,
+            leftSide: null,
+            operation: '',
+          });
           break;
         case '-':
           setResult(
             (calculation.leftSide! - calculation.rightSide!).toLocaleString()
           );
+          setCalculation({
+            rightSide: null,
+            leftSide: null,
+            operation: '',
+          });
           break;
         case '/':
           setResult(
             (calculation.leftSide! / calculation.rightSide!).toLocaleString()
           );
+          setCalculation({
+            rightSide: null,
+            leftSide: null,
+            operation: '',
+          });
           break;
         case '*':
           setResult(
             (calculation.leftSide! * calculation.rightSide!).toLocaleString()
           );
+          setCalculation({
+            rightSide: null,
+            leftSide: null,
+            operation: '',
+          });
           break;
         default:
           throw new Error('Invalid operation');

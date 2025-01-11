@@ -4,10 +4,12 @@ import './CalculatorNumber.css';
 export default function calculatorNumbers({
   calculation,
   setCalculation,
+  setResult,
 }: CalculatorNumberProps) {
   const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
   const onClick = (e: React.MouseEvent, number: number) => {
     e.preventDefault();
+    setResult(null);
     if (!calculation?.rightSide && !calculation.operation) {
       setCalculation((prev) => ({
         ...prev,
@@ -19,7 +21,6 @@ export default function calculatorNumbers({
         rightSide: parseInt(`${prev!.rightSide ?? ''}${number}`),
       }));
     }
-    console.log(calculation);
   };
 
   return (

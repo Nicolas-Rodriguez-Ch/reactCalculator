@@ -3,6 +3,7 @@ import CalculatorNumbers from '../CalculatorNumbers/CalculatorNumbers';
 import CalculatorOperations from '../CalculatorOperations/CalculatorOperations';
 import { useState } from 'react';
 import { calculation } from '../../utils/types/types';
+import Calculatordisplay from '../CalculatorDisplay/Calculatordisplay';
 
 export default function Calculator() {
   const [calculation, setCalculation] = useState<calculation>({
@@ -14,9 +15,11 @@ export default function Calculator() {
   return (
     <>
       <div className='calculator_container'>
+        <Calculatordisplay result={result} calculation={calculation} />
         <CalculatorNumbers
           calculation={calculation}
           setCalculation={setCalculation}
+          setResult={setResult}
         />
         <CalculatorOperations
           calculation={calculation}
