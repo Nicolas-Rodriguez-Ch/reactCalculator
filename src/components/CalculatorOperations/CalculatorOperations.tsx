@@ -29,32 +29,50 @@ export default function CalculatorOperations({
   const calcResult = (e: React.MouseEvent, calculation: calculation) => {
     e.preventDefault();
     try {
-      let resultValue = '';
+      let result = '';
       switch (calculation.operation) {
         case '+':
-          resultValue = (
+          result = (
             calculation.leftSide! + calculation.rightSide!
           ).toLocaleString();
           break;
         case '-':
-          resultValue = (
+          result = (
             calculation.leftSide! - calculation.rightSide!
           ).toLocaleString();
           break;
         case '/':
-          resultValue = (
+          result = (
             calculation.leftSide! / calculation.rightSide!
           ).toLocaleString();
           break;
         case '*':
-          resultValue = (
+          result = (
             calculation.leftSide! * calculation.rightSide!
           ).toLocaleString();
           break;
         default:
           throw new Error('Invalid operation');
       }
-      setResult(resultValue);
+      
+      const previousCalculations = JSON.parse(
+        localStorage.getItem('calculations') || '[]'
+      );
+
+      const newCalculation = {
+        leftSide: calculation.leftSide,
+        operation: calculation.operation,
+        rightSide: calculation.rightSide,
+        result,
+      };
+
+      previousCalculations.push(newCalculation);
+
+      localStorage.setItem(
+        'calculations',
+        JSON.stringify(previousCalculations)
+      );
+      setResult(result);
       setCalculation({
         rightSide: null,
         leftSide: null,
