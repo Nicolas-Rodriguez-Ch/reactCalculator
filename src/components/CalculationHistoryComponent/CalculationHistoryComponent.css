@@ -33,3 +33,17 @@
 .calculationHistoryComponent_title{
   font-size:x-large;
 }
+
+.calculationHistoryComponent_button {
+  border: 1px solid gray;
+  padding: 10px;
+  font-size: large;
+  color: black;
+  background-color: #669bbc;
+  border-radius: 10px;
+}
+.calculationHistoryComponent_button:hover {
+  cursor: pointer;
+  background-color: #003049;
+  color: white;
+}

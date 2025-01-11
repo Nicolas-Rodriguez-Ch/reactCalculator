@@ -5,11 +5,17 @@ import { calculation } from '../../utils/types/types';
 
 export default function CalculationHistoryComponent() {
   const calcHistory = JSON.parse(localStorage.getItem('calculations') || '[]');
+  const deleteHistory = (e: React.MouseEvent) => {
+    e.preventDefault();
+    localStorage.removeItem('calculations');
+  };
   return (
     <div className='calculationHistoryComponent_container'>
       {calcHistory.length > 0 ? (
         <>
-          <h1 className='calculationHistoryComponent_title'>Your Calculations</h1>
+          <h1 className='calculationHistoryComponent_title'>
+            Your Calculations
+          </h1>
           {calcHistory.map((calc: calculation) => {
             return (
               <span
@@ -21,6 +27,11 @@ export default function CalculationHistoryComponent() {
               </span>
             );
           })}
+          <button 
+          className='calculationHistoryComponent_button'
+          onClick={(e) => deleteHistory(e)}>
+            Delete your calculations
+          </button>
         </>
       ) : (
         <>
