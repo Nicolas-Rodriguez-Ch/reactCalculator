@@ -1,5 +1,5 @@
 .calculatorOperation_container {
-  width: 300px;
+  width: 282px;
   display: flex;
   flex-wrap: wrap;
   gap: 15px;
@@ -7,7 +7,7 @@
 }
 .calculatorOperation_button {
   border: 1px solid gray;
-  padding: 25px;
+  padding: 20px;
   font-size: 25px;
   color: black;
   background-color: #669bbc;
@@ -15,7 +15,7 @@
 }
 .calculatorOperation_button_disabled {
   border: 1px solid #669bbc;
-  padding: 25px;
+  padding: 20px;
   font-size: 25px;
   color: black;
   background-color: gray;

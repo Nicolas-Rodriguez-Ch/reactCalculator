@@ -1,0 +1,23 @@
+.headerComponent_container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: #c1121f;
+  color: #FDF0D5;
+  height: 25px;
+  padding: 5px;
+  margin-bottom: 5px;
+  gap: 15px;
+}
+a{
+  text-decoration: none !important;
+  color: #FDF0D5;
+  height: 100%;
+  padding: 5px;
+  font-weight: bold;
+}
+.headerComponent_activeRoute{
+  background-color: #669BBC;
+  color: #003049;
+}
