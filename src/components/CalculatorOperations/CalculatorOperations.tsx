@@ -81,6 +81,16 @@ export default function CalculatorOperations({
       setResult('Error: An unknown error occurred');
     }
   };
+
+  const clearState = (e: React.MouseEvent) => {
+    e.preventDefault();
+    setCalculation({
+      rightSide: null,
+      leftSide: null,
+      operation: '',
+    });
+    setResult(null);
+  };
   return (
     <>
       <div className='calculatorOperation_container'>
@@ -108,18 +118,31 @@ export default function CalculatorOperations({
               );
             })}
         {allFieldsValid ? (
-          <button
-            className='calculatorOperation_button'
-            onClick={(e) => {
-              calcResult(e, calculation);
-            }}
-          >
-            Result
-          </button>
+          <>
+            <button
+              className='calculatorOperation_button'
+              onClick={(e) => {
+                calcResult(e, calculation);
+              }}
+            >
+              Result
+            </button>
+            <button
+              className='calculatorOperation_button'
+              onClick={(e) => clearState(e)}
+            >
+              Clear
+            </button>
+          </>
         ) : (
-          <button disabled className='calculatorOperation_button_disabled'>
-            Result
-          </button>
+          <>
+            <button disabled className='calculatorOperation_button_disabled'>
+              Result
+            </button>
+            <button disabled className='calculatorOperation_button_disabled'>
+              Clear
+            </button>
+          </>
         )}
       </div>
     </>

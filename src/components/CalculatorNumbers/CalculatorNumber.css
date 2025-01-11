@@ -2,7 +2,7 @@
   width: 300px;
   display: flex;
   flex-wrap: wrap;
-  gap: 25px;
+  gap: 20px;
   justify-content: center;
 }
 .calculatorNumber_button {
