@@ -29,50 +29,37 @@ export default function CalculatorOperations({
   const calcResult = (e: React.MouseEvent, calculation: calculation) => {
     e.preventDefault();
     try {
+      let resultValue = '';
       switch (calculation.operation) {
         case '+':
-          setResult(
-            (calculation.leftSide! + calculation.rightSide!).toLocaleString()
-          );
-          setCalculation({
-            rightSide: null,
-            leftSide: null,
-            operation: '',
-          });
+          resultValue = (
+            calculation.leftSide! + calculation.rightSide!
+          ).toLocaleString();
           break;
         case '-':
-          setResult(
-            (calculation.leftSide! - calculation.rightSide!).toLocaleString()
-          );
-          setCalculation({
-            rightSide: null,
-            leftSide: null,
-            operation: '',
-          });
+          resultValue = (
+            calculation.leftSide! - calculation.rightSide!
+          ).toLocaleString();
           break;
         case '/':
-          setResult(
-            (calculation.leftSide! / calculation.rightSide!).toLocaleString()
-          );
-          setCalculation({
-            rightSide: null,
-            leftSide: null,
-            operation: '',
-          });
+          resultValue = (
+            calculation.leftSide! / calculation.rightSide!
+          ).toLocaleString();
           break;
         case '*':
-          setResult(
-            (calculation.leftSide! * calculation.rightSide!).toLocaleString()
-          );
-          setCalculation({
-            rightSide: null,
-            leftSide: null,
-            operation: '',
-          });
+          resultValue = (
+            calculation.leftSide! * calculation.rightSide!
+          ).toLocaleString();
           break;
         default:
           throw new Error('Invalid operation');
       }
+      setResult(resultValue);
+      setCalculation({
+        rightSide: null,
+        leftSide: null,
+        operation: '',
+      });
     } catch (error: unknown) {
       if (error instanceof Error) {
         console.error('Calculation error:', error.message);
