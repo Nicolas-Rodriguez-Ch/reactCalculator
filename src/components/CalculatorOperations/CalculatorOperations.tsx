@@ -141,7 +141,7 @@ export default function CalculatorOperations({
             </button>
             <button
               className='calculatorOperation_button'
-              onClick={(e) => clearState(e)}
+              onClick={clearState}
             >
               Clear
             </button>
@@ -158,7 +158,7 @@ export default function CalculatorOperations({
                   ? 'calculatorOperation_button_disabled'
                   : 'calculatorOperation_button'
               }
-              onClick={(e) => clearState(e)}
+              onClick={clearState}
             >
               Clear
             </button>
