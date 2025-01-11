@@ -13,7 +13,7 @@ export default function Calculator() {
   console.log('🚀 ~ Calculator ~ calculation:', calculation);
   return (
     <>
-      <div className="calculator_container">
+      <div className='calculator_container'>
         <CalculatorNumbers
           calculation={calculation}
           setCalculation={setCalculation}

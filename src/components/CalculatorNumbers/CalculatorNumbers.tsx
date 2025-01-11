@@ -9,12 +9,11 @@ export default function calculatorNumbers({
   const onClick = (e: React.MouseEvent, number: number) => {
     e.preventDefault();
     if (!calculation?.rightSide && !calculation.operation) {
-      
       setCalculation((prev) => ({
         ...prev,
         leftSide: parseInt(`${prev!.leftSide ?? ''}${number}`),
       }));
-    } else if (calculation?.leftSide) {     
+    } else if (calculation?.leftSide) {
       setCalculation((prev) => ({
         ...prev,
         rightSide: parseInt(`${prev!.rightSide ?? ''}${number}`),
@@ -25,12 +24,12 @@ export default function calculatorNumbers({
 
   return (
     <>
-      <div className="calculatorNumber_container">
+      <div className='calculatorNumber_container'>
         {numbers.map((number) => {
           return (
             <button
               key={number}
-              className="calculatorNumber_button"
+              className='calculatorNumber_button'
               onClick={(e) => onClick(e, number)}
             >
               <b>{number}</b>

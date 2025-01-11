@@ -5,17 +5,16 @@
   gap: 25px;
   justify-content: center;
 }
-.calculatorNumber_button{
+.calculatorNumber_button {
   border: 1px solid gray;
   padding: 25px;
   font-size: 25px;
   color: black;
   background-color: #669bbc;
   border-radius: 10px;
-
 }
-.calculatorNumber_button:hover{
-  cursor:pointer;
+.calculatorNumber_button:hover {
+  cursor: pointer;
   background-color: #003049;
   color: white;
 }

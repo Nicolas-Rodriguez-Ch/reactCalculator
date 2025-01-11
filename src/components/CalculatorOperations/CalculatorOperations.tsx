@@ -22,12 +22,12 @@ export default function CalculatorOperations({
 
   return (
     <>
-      <div className="calculatorOperation_container">
+      <div className='calculatorOperation_container'>
         {minLength > 0
           ? operations.map((operation) => {
               return (
                 <button
-                  className="calculatorOperation_button"
+                  className='calculatorOperation_button'
                   key={operation}
                   onClick={(e) => onClick(e, operation)}
                 >
@@ -38,7 +38,7 @@ export default function CalculatorOperations({
           : operations.map((operation) => {
               return (
                 <button
-                  className="calculatorOperation_button_disabled"
+                  className='calculatorOperation_button_disabled'
                   key={operation}
                   disabled
                 >
@@ -46,6 +46,7 @@ export default function CalculatorOperations({
                 </button>
               );
             })}
+        {minLength > 0 ? <span></span> : null}
       </div>
     </>
   );

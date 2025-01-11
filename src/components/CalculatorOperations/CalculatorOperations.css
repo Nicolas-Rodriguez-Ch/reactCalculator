@@ -5,7 +5,7 @@
   gap: 15px;
   justify-content: center;
 }
-.calculatorOperation_button{
+.calculatorOperation_button {
   border: 1px solid gray;
   padding: 25px;
   font-size: 25px;
@@ -21,8 +21,8 @@
   background-color: gray;
   border-radius: 10px;
 }
-.calculatorOperation_button:hover{
-  cursor:pointer;
+.calculatorOperation_button:hover {
+  cursor: pointer;
   background-color: #003049;
   color: white;
 }
