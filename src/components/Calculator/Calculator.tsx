@@ -6,11 +6,11 @@ import { calculation } from '../../utils/types/types';
 
 export default function Calculator() {
   const [calculation, setCalculation] = useState<calculation>({
-    rightSide: 0,
+    rightSide: null,
     leftSide: null,
     operation: '',
   });
-  console.log('🚀 ~ Calculator ~ calculation:', calculation);
+  const [result, setResult] = useState<string | null>(null);
   return (
     <>
       <div className='calculator_container'>
@@ -21,6 +21,7 @@ export default function Calculator() {
         <CalculatorOperations
           calculation={calculation}
           setCalculation={setCalculation}
+          setResult={setResult}
         />
       </div>
     </>
