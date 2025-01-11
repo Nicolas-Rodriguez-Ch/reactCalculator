@@ -10,7 +10,7 @@
   margin-bottom: 5px;
   gap: 15px;
 }
-a{
+.headerComponent_container> a{
   text-decoration: none !important;
   color: #FDF0D5;
   height: 100%;

@@ -13,21 +13,19 @@ export default function Calculator() {
   });
   const [result, setResult] = useState<string | null>(null);
   return (
-    <>
-      <div className='calculator_container'>
-        <Calculatordisplay result={result} calculation={calculation} />
-        <CalculatorNumbers
-          calculation={calculation}
-          setCalculation={setCalculation}
-          setResult={setResult}
-        />
-        <CalculatorOperations
-          calculation={calculation}
-          setCalculation={setCalculation}
-          result={result}
-          setResult={setResult}
-        />
-      </div>
-    </>
+    <div className='calculator_container'>
+      <Calculatordisplay result={result} calculation={calculation} />
+      <CalculatorNumbers
+        calculation={calculation}
+        setCalculation={setCalculation}
+        setResult={setResult}
+      />
+      <CalculatorOperations
+        calculation={calculation}
+        setCalculation={setCalculation}
+        result={result}
+        setResult={setResult}
+      />
+    </div>
   );
 }

@@ -2,6 +2,7 @@ export interface calculation {
   leftSide: number | null;
   operation: string;
   rightSide: number | null;
+  result?: string
 }
 export interface CalculatorNumberProps {
   calculation: calculation;
