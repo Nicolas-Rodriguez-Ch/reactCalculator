@@ -1,11 +1,11 @@
-import { CalculatorNumberProps } from "../../utils/types/types";
-import "./CalculatorOperations.css";
+import { CalculatorNumberProps } from '../../utils/types/types';
+import './CalculatorOperations.css';
 
 export default function CalculatorOperations({
   calculation,
   setCalculation,
 }: CalculatorNumberProps) {
-  const operations = ["+", "-", "*", "/"];
+  const operations = ['+', '-', '*', '/'];
   let minLength = 0;
   const onClick = (e: React.MouseEvent, operation: string) => {
     e.preventDefault();

@@ -1,16 +1,16 @@
-import "./Calculator.css";
-import CalculatorNumbers from "../CalculatorNumbers/CalculatorNumbers";
-import CalculatorOperations from "../CalculatorOperations/CalculatorOperations";
-import { useState } from "react";
-import { calculation } from "../../utils/types/types";
+import './Calculator.css';
+import CalculatorNumbers from '../CalculatorNumbers/CalculatorNumbers';
+import CalculatorOperations from '../CalculatorOperations/CalculatorOperations';
+import { useState } from 'react';
+import { calculation } from '../../utils/types/types';
 
 export default function Calculator() {
   const [calculation, setCalculation] = useState<calculation>({
     rightSide: 0,
     leftSide: null,
-    operation: "",
+    operation: '',
   });
-  console.log("🚀 ~ Calculator ~ calculation:", calculation);
+  console.log('🚀 ~ Calculator ~ calculation:', calculation);
   return (
     <>
       <div className="calculator_container">

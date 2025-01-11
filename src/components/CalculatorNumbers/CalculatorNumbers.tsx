@@ -1,5 +1,5 @@
-import { CalculatorNumberProps } from "../../utils/types/types";
-import "./CalculatorNumber.css";
+import { CalculatorNumberProps } from '../../utils/types/types';
+import './CalculatorNumber.css';
 
 export default function calculatorNumbers({
   calculation,
@@ -12,12 +12,12 @@ export default function calculatorNumbers({
       
       setCalculation((prev) => ({
         ...prev,
-        leftSide: parseInt(`${prev!.leftSide ?? ""}${number}`),
+        leftSide: parseInt(`${prev!.leftSide ?? ''}${number}`),
       }));
     } else if (calculation?.leftSide) {     
       setCalculation((prev) => ({
         ...prev,
-        rightSide: parseInt(`${prev!.rightSide ?? ""}${number}`),
+        rightSide: parseInt(`${prev!.rightSide ?? ''}${number}`),
       }));
     }
     console.log(calculation);
