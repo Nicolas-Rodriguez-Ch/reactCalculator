@@ -1,0 +1,21 @@
+.calculatorOperation_container {
+  width: 300px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+.calculatorOperation_button{
+  border: 1px solid gray;
+  padding: 25px;
+  font-size: 25px;
+  color: black;
+  background-color: #669bbc;
+  border-radius: 10px;
+
+}
+.calculatorOperation_button:hover{
+  cursor:pointer;
+  background-color: #003049;
+  color: white;
+}
