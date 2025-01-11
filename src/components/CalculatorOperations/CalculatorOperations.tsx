@@ -4,6 +4,7 @@ import './CalculatorOperations.css';
 export default function CalculatorOperations({
   calculation,
   setCalculation,
+  result,
   setResult,
 }: CalculatorOperationProps) {
   const operations = ['+', '-', '*', '/'];
@@ -82,6 +83,12 @@ export default function CalculatorOperations({
     }
   };
 
+  const isClearEnabled =
+    calculation.leftSide !== null ||
+    calculation.rightSide !== null ||
+    calculation.operation !== '' ||
+    result !== null;
+
   const clearState = (e: React.MouseEvent) => {
     e.preventDefault();
     setCalculation({
@@ -139,7 +146,15 @@ export default function CalculatorOperations({
             <button disabled className='calculatorOperation_button_disabled'>
               Result
             </button>
-            <button disabled className='calculatorOperation_button_disabled'>
+            <button
+              disabled={!isClearEnabled}
+              className={
+                !isClearEnabled
+                  ? 'calculatorOperation_button_disabled'
+                  : 'calculatorOperation_button'
+              }
+              onClick={(e) => clearState(e)}
+            >
               Clear
             </button>
           </>

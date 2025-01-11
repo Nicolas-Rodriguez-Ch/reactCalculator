@@ -24,6 +24,7 @@ export default function Calculator() {
         <CalculatorOperations
           calculation={calculation}
           setCalculation={setCalculation}
+          result={result}
           setResult={setResult}
         />
       </div>

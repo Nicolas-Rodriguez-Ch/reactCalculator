@@ -11,10 +11,11 @@ export interface CalculatorNumberProps {
 export interface CalculatorOperationProps {
   calculation: calculation;
   setCalculation: React.Dispatch<React.SetStateAction<calculation>>;
+  result: string | null;
   setResult: React.Dispatch<React.SetStateAction<string | null>>;
 }
 
 export interface CalculatorDisplayProps {
-  calculation: calculation,
-  result: string | null
+  calculation: calculation;
+  result: string | null;
 }
