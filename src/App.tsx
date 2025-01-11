@@ -1,10 +1,16 @@
+import { Route, Routes } from 'react-router';
 import './App.css';
-import Calculator from './components/Calculator/Calculator';
+import Calculator from './pages/Calculator/Calculator';
+import { paths } from './static/paths';
+import CalculationsHistory from './pages/CalculationHistory/CalculationsHistory';
 
 function App() {
   return (
     <>
-      <Calculator />
+      <Routes>
+        <Route path={paths.home} element={<Calculator />} />
+        <Route path={paths.history} element={<CalculationsHistory />} />
+      </Routes>
     </>
   );
 }

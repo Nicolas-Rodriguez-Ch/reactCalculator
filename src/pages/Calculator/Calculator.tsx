@@ -1,9 +1,9 @@
 import './Calculator.css';
-import CalculatorNumbers from '../CalculatorNumbers/CalculatorNumbers';
-import CalculatorOperations from '../CalculatorOperations/CalculatorOperations';
+import CalculatorNumbers from '../../components/CalculatorNumbers/CalculatorNumbers';
+import CalculatorOperations from '../../components/CalculatorOperations/CalculatorOperations';
 import { useState } from 'react';
 import { calculation } from '../../utils/types/types';
-import Calculatordisplay from '../CalculatorDisplay/Calculatordisplay';
+import Calculatordisplay from '../../components/CalculatorDisplay/Calculatordisplay';
 
 export default function Calculator() {
   const [calculation, setCalculation] = useState<calculation>({
