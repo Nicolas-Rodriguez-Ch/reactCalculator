@@ -12,7 +12,14 @@
   color: black;
   background-color: #669bbc;
   border-radius: 10px;
-
+}
+.calculatorOperation_button_disabled {
+  border: 1px solid #669bbc;
+  padding: 25px;
+  font-size: 25px;
+  color: black;
+  background-color: gray;
+  border-radius: 10px;
 }
 .calculatorOperation_button:hover{
   cursor:pointer;

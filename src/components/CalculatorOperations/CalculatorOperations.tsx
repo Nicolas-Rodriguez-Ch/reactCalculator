@@ -35,7 +35,17 @@ export default function CalculatorOperations({
                 </button>
               );
             })
-          : null}
+          : operations.map((operation) => {
+              return (
+                <button
+                  className="calculatorOperation_button_disabled"
+                  key={operation}
+                  disabled
+                >
+                  <b>{operation}</b>
+                </button>
+              );
+            })}
       </div>
     </>
   );
